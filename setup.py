@@ -14,7 +14,7 @@ if os.path.isfile("DESCRIPTION.rst"):
         long_description = file.read()
 
 setup(
-    name='python-digitalocean',
+    name='python-digitalocean-me',
     version='1.17.0',
     description='digitalocean.com API to manage Droplets and Images',
     author='Lorenzo Setale ( http://who.is.lorenzo.setale.me/? )',
