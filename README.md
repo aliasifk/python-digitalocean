@@ -2,10 +2,10 @@
 <p align="center">Easy access to Digital Ocean APIs to deploy droplets, images and more.</p>
 
 <p align="center">
-<a href="https://travis-ci.org/koalalorenzo/python-digitalocean"><img src="https://travis-ci.org/koalalorenzo/python-digitalocean.svg" alt="Build Status"></a>
-<a href="https://github.com/koalalorenzo/python-digitalocean"><img src="https://img.shields.io/github/forks/koalalorenzo/python-digitalocean.svg?style=social&label=Fork"></a>
-<a href="https://github.com/koalalorenzo/python-digitalocean"><img src="https://img.shields.io/github/stars/koalalorenzo/python-digitalocean.svg?style=social&label=Star"></a>
-<a href="https://github.com/koalalorenzo/python-digitalocean"><img src="https://img.shields.io/github/watchers/koalalorenzo/python-digitalocean.svg?style=social&label=Watch"></a>
+<a href="https://travis-ci.org/aliasifk/python-digitalocean"><img src="https://travis-ci.org/aliasifk/python-digitalocean.svg" alt="Build Status"></a>
+<a href="https://github.com/aliasifk/python-digitalocean"><img src="https://img.shields.io/github/forks/aliasifk/python-digitalocean.svg?style=social&label=Fork"></a>
+<a href="https://github.com/aliasifk/python-digitalocean"><img src="https://img.shields.io/github/stars/aliasifk/python-digitalocean.svg?style=social&label=Star"></a>
+<a href="https://github.com/aliasifk/python-digitalocean"><img src="https://img.shields.io/github/watchers/aliasifk/python-digitalocean.svg?style=social&label=Watch"></a>
 </p>
 
 ## Table of Contents
@@ -14,27 +14,27 @@
 - [Configurations](#configurations)
 - [Features](#features)
 - [Examples](#examples)
-   - [Listing the droplets](#listing-the-droplets)
-   - [Listing the droplets by tags](#listing-the-droplets-by-tags)
-   - [Add a tag to a droplet](#add-a-tag-to-a-droplet)
-   - [Shutdown all droplets](#shutdown-all-droplets)
-   - [Creating a Droplet and checking its status](#creating-a-droplet-and-checking-its-status)
-   - [Checking the status of the droplet](#checking-the-status-of-the-droplet)
-   - [Listing the Projects](#listing-the-projects)
-   - [Assign a resource for specific project](#assign-a-resource-for-specific-project)
-   - [List all the resources of a project](#list-all-the-resources-of-a-project)
-   - [Add SSHKey into DigitalOcean Account](#add-sshkey-into-digitalocean-account)
-   - [Creating a new droplet with all your SSH keys](#creating-a-new-droplet-with-all-your-ssh-keys)
-   - [Creating a Firewall](#creating-a-firewall)
-   - [Listing the domains](#listing-the-domains)
-   - [Listing records of a domain](#listing-records-of-a-domain)
-   - [Creating a domain record](#creating-a-domain-record)
-   - [Update a domain record](#update-a-domain-record)
+  - [Listing the droplets](#listing-the-droplets)
+  - [Listing the droplets by tags](#listing-the-droplets-by-tags)
+  - [Add a tag to a droplet](#add-a-tag-to-a-droplet)
+  - [Shutdown all droplets](#shutdown-all-droplets)
+  - [Creating a Droplet and checking its status](#creating-a-droplet-and-checking-its-status)
+  - [Checking the status of the droplet](#checking-the-status-of-the-droplet)
+  - [Listing the Projects](#listing-the-projects)
+  - [Assign a resource for specific project](#assign-a-resource-for-specific-project)
+  - [List all the resources of a project](#list-all-the-resources-of-a-project)
+  - [Add SSHKey into DigitalOcean Account](#add-sshkey-into-digitalocean-account)
+  - [Creating a new droplet with all your SSH keys](#creating-a-new-droplet-with-all-your-ssh-keys)
+  - [Creating a Firewall](#creating-a-firewall)
+  - [Listing the domains](#listing-the-domains)
+  - [Listing records of a domain](#listing-records-of-a-domain)
+  - [Creating a domain record](#creating-a-domain-record)
+  - [Update a domain record](#update-a-domain-record)
 - [Getting account requests/hour limits status](#getting-account-requestshour-limits-status)
 - [Session customization](#session-customization)
 - [Testing](#testing)
-   - [Test using Docker](#test-using-docker)
-   - [Testing using pytest manually](#testing-using-pytest-manually)
+  - [Test using Docker](#test-using-docker)
+  - [Testing using pytest manually](#testing-using-pytest-manually)
 - [Links](#links)
 
 ## How to install
@@ -64,23 +64,24 @@ Note: Probably want to add the export line above to your `.bashrc` file.
 **[⬆ back to top](#table-of-contents)**
 
 ## Features
+
 python-digitalocean support all the features provided via digitalocean.com APIs, such as:
 
-* Get user's Projects
-* Assign a resource to a user project
-* List the resources of user's project
-* Get user's Droplets
-* Get user's Images (Snapshot and Backups)
-* Get public Images
-* Get Droplet's event status
-* Create and Remove a Droplet
-* Create, Add and Remove Tags from Droplets
-* Resize a Droplet
-* Shutdown, restart and boot a Droplet
-* Power off, power on and "power cycle" a Droplet
-* Perform Snapshot
-* Enable/Disable automatic Backups
-* Restore root password of a Droplet
+- Get user's Projects
+- Assign a resource to a user project
+- List the resources of user's project
+- Get user's Droplets
+- Get user's Images (Snapshot and Backups)
+- Get public Images
+- Get Droplet's event status
+- Create and Remove a Droplet
+- Create, Add and Remove Tags from Droplets
+- Resize a Droplet
+- Shutdown, restart and boot a Droplet
+- Power off, power on and "power cycle" a Droplet
+- Perform Snapshot
+- Enable/Disable automatic Backups
+- Restore root password of a Droplet
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -107,6 +108,7 @@ my_projects[0].assign_resource(["do:droplet:<Droplet Number>"])
 ```
 
 ### List all the resources of a project
+
 ```python
 import digitalocean
 manager = digitalocean.Manager(token="secretspecialuniquesnowflake")
@@ -193,6 +195,7 @@ droplet.create()
 **[⬆ back to top](#table-of-contents)**
 
 ### Checking the status of the droplet
+
 ```python
 actions = droplet.get_actions()
 for action in actions:
@@ -228,6 +231,7 @@ my_projects[0].assign_resource(["do:droplet:<Droplet Number>"])
 **[⬆ back to top](#table-of-contents)**
 
 ### List all the resources of a project
+
 ```python
 import digitalocean
 manager = digitalocean.Manager(token="secretspecialuniquesnowflake")
@@ -239,6 +243,7 @@ print(resources)
 **[⬆ back to top](#table-of-contents)**
 
 ### Add SSHKey into DigitalOcean Account
+
 ```python
 from digitalocean import SSHKey
 
@@ -252,6 +257,7 @@ key.create()
 **[⬆ back to top](#table-of-contents)**
 
 ### Creating a new droplet with all your SSH keys
+
 ```python
 manager = digitalocean.Manager(token="secretspecialuniquesnowflake")
 keys = manager.get_all_sshkeys()
@@ -376,7 +382,9 @@ account = digitalocean.Account(token="secretspecialuniquesnowflake").load()
 manager = digitalocean.Manager(token="secretspecialuniquesnowflake")
 account = manager.get_account()
 ```
+
 Output:
+
 ```text
 droplet_limit: 25
 email: 'name@domain.me'
@@ -393,7 +401,8 @@ uuid: 'my_id'
 ```
 
 When using the Manager().get_all.. functions, the rate limit will be stored on the manager object:
- ```python
+
+```python
 import digitalocean
 manager = digitalocean.Manager(token="secretspecialuniquesnowflake")
 domains = manager.get_all_domains()
@@ -410,6 +419,7 @@ You can take advantage of the [requests](http://docs.python-requests.org/en/mast
 ### Configure retries in case of connection error
 
 This example shows how to configure your client to retry 3 times in case of `ConnectionError`:
+
 ```python
 import digitalocean
 import requests
@@ -448,6 +458,7 @@ See [event hooks documentation](http://docs.python-requests.org/en/master/user/a
 ## Testing
 
 ### Test using Docker
+
 To test this python-digitalocean you can use [docker](https://www.docker.com) to have a **clean environment automatically**. First you have to build the container by running in your shell on the repository directory:
 
     docker build -t "pdo-tests" .
@@ -461,6 +472,7 @@ Then you can run all the tests (for both python 2 and python 3)
 **[⬆ back to top](#table-of-contents)**
 
 ### Testing using pytest manually
+
 Use [pytest](http://pytest.org/) to perform testing. It is recommended to use a dedicated virtualenv to perform tests, using these commands:
 
     $ virtualenv /tmp/digitalocean_env
@@ -475,9 +487,9 @@ To run all the tests manually use py.test command:
 
 ## Links
 
-  * GitHub: [https://github.com/koalalorenzo/python-digitalocean](https://github.com/koalalorenzo/python-digitalocean)
-  * PyPI page: [https://pypi.python.org/pypi/python-digitalocean/](https://pypi.python.org/pypi/python-digitalocean/)
-  * Author Website: [http://who.is.lorenzo.setale.me/?](http://setale.me/)
-  * Author Blog: [http://blog.setale.me/](http://blog.setale.me/)
+- GitHub: [https://github.com/aliasifk/python-digitalocean](https://github.com/aliasifk/python-digitalocean)
+- PyPI page: [https://pypi.python.org/pypi/python-digitalocean/](https://pypi.python.org/pypi/python-digitalocean/)
+- Author Website: [http://who.is.lorenzo.setale.me/?](http://setale.me/)
+- Author Blog: [http://blog.setale.me/](http://blog.setale.me/)
 
 **[⬆ back to top](#table-of-contents)**

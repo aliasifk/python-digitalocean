@@ -501,7 +501,7 @@ class Droplet(BaseAPI):
                 #
                 # type(u'') and type('') is the same in python 3 but
                 # different in 2. See:
-                # https://github.com/koalalorenzo/python-digitalocean/issues/80
+                # https://github.com/aliasifk/python-digitalocean/issues/80
                 regexp_of_fingerprint = '([0-9a-fA-F]{2}:){15}[0-9a-fA-F]'
                 match = re.match(regexp_of_fingerprint, ssh_key)
 

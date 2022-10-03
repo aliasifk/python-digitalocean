@@ -19,7 +19,7 @@ setup(
     description='digitalocean.com API to manage Droplets and Images',
     author='Lorenzo Setale ( http://who.is.lorenzo.setale.me/? )',
     author_email='lorenzo@setale.me',
-    url='https://github.com/koalalorenzo/python-digitalocean',
+    url='https://github.com/aliasifk/python-digitalocean',
     packages=['digitalocean'],
     install_requires=['requests', 'jsonpickle'],
     test_suite='digitalocean.tests',

@@ -174,17 +174,17 @@ To run all the tests manually use py.test command:
 Links
 -----
 
--  GitHub: https://github.com/koalalorenzo/python-digitalocean
+-  GitHub: https://github.com/aliasifk/python-digitalocean
 -  PyPI page: https://pypi.python.org/pypi/python-digitalocean/
 -  Author Website:
    `http://who.is.lorenzo.setale.me/? <http://setale.me/>`__
 -  Author Blog: http://blog.setale.me/
 
-.. |image0| image:: https://travis-ci.org/koalalorenzo/python-digitalocean.svg
-   :target: https://travis-ci.org/koalalorenzo/python-digitalocean
+.. |image0| image:: https://travis-ci.org/aliasifk/python-digitalocean.svg
+   :target: https://travis-ci.org/aliasifk/python-digitalocean
 .. |image1| image:: https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork
-   :target: https://travis-ci.org/koalalorenzo/python-digitalocean
+   :target: https://travis-ci.org/aliasifk/python-digitalocean
 .. |image2| image:: https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star
-   :target: https://travis-ci.org/koalalorenzo/python-digitalocean
+   :target: https://travis-ci.org/aliasifk/python-digitalocean
 .. |image3| image:: https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch
-   :target: https://travis-ci.org/koalalorenzo/python-digitalocean
+   :target: https://travis-ci.org/aliasifk/python-digitalocean
