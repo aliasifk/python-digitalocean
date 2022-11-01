@@ -4,6 +4,7 @@ import re
 from .Action import Action
 from .Image import Image
 from .Kernel import Kernel
+from .Firewall import Firewall
 from .baseapi import BaseAPI, Error, GET, POST, DELETE
 from .SSHKey import SSHKey
 from .Volume import Volume
@@ -641,6 +642,28 @@ class Droplet(BaseAPI):
                 break
 
         return kernels
+
+    def get_firewalls(self):
+        """
+            Get a list of firewalls associated with this droplet
+        """
+
+        firewalls = list()
+        data = self.get_data("droplets/%s/firewalls/" % self.id)
+        while True:
+            for jsond in data[u'firewalls']:
+                firewall = Firewall(**jsond)
+                firewall.token = self.tokens
+                firewalls.append(firewall)
+            try:
+                url = data[u'links'][u'pages'].get(u'next')
+                if not url:
+                        break
+                data = self.get_data(url)
+            except KeyError:  # No links.
+                break
+
+        return firewalls
 
     def update_volumes_data(self):
         """
